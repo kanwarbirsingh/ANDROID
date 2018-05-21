@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_color">
+    
+    <RelativeLayout 
+        android:id="@+id/offerTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <include 
+            layout="@layout/header_layout"/>
+        
+    </RelativeLayout>
+    <LinearLayout 
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:background="@color/header_bg"
+        android:layout_below="@+id/offerTop"
+        android:orientation="horizontal">
+        
+        <RelativeLayout 
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+	        <Button 
+	            android:id="@+id/btnDailyDeals"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:padding="10dip"
+	            android:text="DAILY DEALS"
+	            android:textColor="@color/white_color"
+	            android:textSize="14dip"
+	            android:background="@android:color/transparent"
+	            android:gravity="center"/>
+	        <View 
+	            android:id="@+id/lineDailyDeals"
+	            android:layout_width="match_parent"
+	            android:layout_height="2dip"
+	            android:background="@color/barline"
+	            android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+        <RelativeLayout 
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+	        <Button 
+	            android:id="@+id/btnDiscounts"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:padding="10dip"
+	            android:text="DISCOUNTS"
+	            android:textColor="@color/white_color"
+	            android:textSize="14dip"
+	            android:background="@android:color/transparent"
+	            android:gravity="center"/>
+	        <View 
+	            android:id="@+id/lineDiscounts"
+	            android:layout_width="match_parent"
+	            android:layout_height="2dip"
+	            android:background="@color/barline"
+	            android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+        <RelativeLayout 
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+	        <Button 
+	            android:id="@+id/btnCashback"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:padding="10dip"
+	            android:text="CASHBACK"
+	            android:textColor="@color/white_color"
+	            android:textSize="14dip"
+	            android:background="@android:color/transparent"
+	            android:gravity="center"/>
+	        <View 
+	            android:id="@+id/lineCashback"
+	            android:layout_width="match_parent"
+	            android:layout_height="2dip"
+	            android:background="@color/barline"
+	            android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+        
+    </LinearLayout>
+    <ListView 
+        android:id="@+id/offersListview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:listSelector="@android:color/transparent"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@color/light_gray"
+        android:dividerHeight="0dip"
+        android:layout_below="@+id/tabLayout">
+        
+    </ListView>
+
+</RelativeLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f5f7">
+    
+    <RelativeLayout 
+        android:id="@+id/inviteTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <include 
+            layout="@layout/header_layout"/>
+        
+    </RelativeLayout>
+    
+    <ListView 
+        android:id="@+id/inviteListview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:listSelector="@android:color/transparent"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10dip"
+        android:padding="10dip"
+        android:layout_below="@+id/inviteTop">
+        
+    </ListView>
+
+</RelativeLayout>

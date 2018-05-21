@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray">
+    
+    <RelativeLayout 
+        android:id="@+id/profileTop"
+        android:layout_width="match_parent"
+        android:layout_height="200dip"
+        android:background="@drawable/profile_bg">
+        
+        <Button 
+            android:id="@+id/btnBack"
+            android:layout_width="45dip"
+            android:layout_height="45dip"
+            android:background="@drawable/ic_arrow_back"
+            android:layout_alignParentLeft="true"
+            android:padding="5dip"/>
+        
+        <ImageView 
+            android:id="@+id/userPic"
+            android:layout_width="80dip"
+            android:layout_height="80dip"
+            android:src="@drawable/temp_user"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/btnBack"/>
+        
+        <TextView 
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name ****"
+            android:textColor="@color/white_color"
+            android:textSize="22dip"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/userPic"
+            android:layout_marginTop="5dip"/>
+        
+        <TextView 
+            android:id="@+id/userTotalpoint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TOTAL POINTS: ****"
+            android:textColor="@color/white_color"
+            android:textSize="16dip"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/userName"/>
+        
+        
+    </RelativeLayout>
+    
+    <!-- tab start content -->
+    <LinearLayout 
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/profileTop"
+        android:background="@color/white_color"
+        android:padding="10dip">
+        
+        <RelativeLayout 
+            android:id="@+id/btnTabConnection"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            
+            <TextView 
+                android:id="@+id/txtConnection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="***"
+                android:textColor="@color/dark_gray"
+                android:layout_centerHorizontal="true"
+                android:textSize="22dip"/>
+            <TextView 
+                android:id="@+id/txtConnectionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CONNECTION"
+                android:textColor="@color/dark_gray"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/txtConnection"
+                android:textSize="14dip"/>
+        </RelativeLayout>
+        
+        <RelativeLayout 
+            android:id="@+id/btnTabCoupons"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            
+            <TextView 
+                android:id="@+id/txtCoupons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="***"
+                android:textColor="@color/dark_gray"
+                android:layout_centerHorizontal="true"
+                android:textSize="22dip"/>
+            <TextView 
+                android:id="@+id/txtCouponsLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="COUPONS"
+                android:textColor="@color/dark_gray"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/txtCoupons"
+                android:textSize="14dip"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <!-- close tab content -->
+    <LinearLayout 
+        android:id="@+id/tabFooterLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tabLayout"
+        android:background="@color/white_color"
+        android:orientation="horizontal">
+        
+        <View 
+            android:id="@+id/tabConnectionFooter"
+            android:layout_width="wrap_content"
+            android:layout_height="1dip"
+            android:background="@color/header_bg"
+            android:layout_weight="1"/>
+        
+        <View 
+            android:id="@+id/tabCouponsFooter"
+            android:layout_width="wrap_content"
+            android:layout_height="1dip"
+            android:background="@color/header_bg"
+            android:visibility="invisible"
+            android:layout_weight="1"/>
+        
+    </LinearLayout>
+    
+    <!-- 
+    /* start Here two layout merage here one for listview and second is gridview 
+     -->
+     
+     <ListView 
+         android:id="@+id/connectedListview"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/tabFooterLay"
+         android:listSelector="@android:color/transparent"
+         android:cacheColorHint="@android:color/transparent"
+         android:divider="@color/dark_gray"
+         android:dividerHeight="1dip">
+         
+     </ListView>
+     
+     <GridView
+		    android:id="@+id/couponGridview"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:numColumns="auto_fit"
+		    android:horizontalSpacing="10dp"
+		    android:verticalSpacing="10dp"
+         	android:layout_below="@+id/tabFooterLay"
+		    android:gravity="center"
+		    android:stretchMode="columnWidth" >  
+		</GridView>  
+     
+     
+     <!-- 
+    /* end Here two layout merage here one for listview and second is gridview 
+     -->
+
+</RelativeLayout>

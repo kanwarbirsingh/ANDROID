@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dip"
+    android:orientation="vertical" 
+    android:descendantFocusability="blocksDescendants">
+    
+    <!-- background images -->
+    <ImageView 
+        android:id="@+id/rowBackground"
+        android:layout_width="match_parent"
+        android:layout_height="200dip"
+        android:src="@drawable/temp_restaurant_1"
+        android:scaleType="fitXY"/>
+    
+    <!-- background parsally transparent bg -->
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/rowBackground"
+        android:layout_alignBottom="@+id/rowBackground"
+        android:background="#80000000" />
+    
+        
+    <TextView 
+        android:id="@+id/distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2.3 KMS"
+        android:textColor="@color/white_color"
+        android:textSize="14dip"
+        android:padding="3dip"
+        android:layout_margin="10dip"
+        android:background="@drawable/btn_red"
+        android:layout_alignParentRight="true"/>
+        
+    <TextView 
+        android:id="@+id/restType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bar/Restaurant"
+        android:textColor="@color/white_color"
+        android:textSize="16dip"
+        android:padding="8dip"
+        android:background="#66000000"
+        android:layout_marginLeft="10dip"
+        android:layout_above="@+id/restAddress"/>
+        
+   <TextView 
+       android:id="@+id/restAddress"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content" 
+       android:text="Miyapur X Roads, Hyderabad"
+       android:textColor="@color/white_color"
+       android:textSize="16dip"
+       android:gravity="center_vertical"
+       android:drawableLeft="@drawable/ic_place"
+       android:layout_above="@+id/innerbottom"
+       android:padding="5dip"/>
+   
+    <RelativeLayout 
+        android:id="@+id/innerbottom"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_alignParentBottom="true"
+        android:layout_alignBottom="@+id/rowBackground"
+        android:background="#66000000"
+        android:orientation="horizontal"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip">
+        
+        <TextView 
+            android:id="@+id/restName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ALI BABA RESTAURANT"
+            android:textColor="@color/white_color"
+            android:textSize="16dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"/>
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:id="@+id/rlfav"
+            android:layout_centerVertical="true" >
+
+            	 <Button 
+             android:id="@+id/btnFavorite"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:background="@drawable/ic_like50"
+             android:layout_alignParentRight="true"
+            	android:layout_centerVertical="true"/>
+        </RelativeLayout>
+        
+        
+            
+    </RelativeLayout>
+    
+    
+</RelativeLayout>

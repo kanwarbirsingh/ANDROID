@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#ffffff"
+    android:layout_height="match_parent">
+
+   <ListView 
+       android:id="@+id/restaurantListview"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:listSelector="@android:color/transparent"
+       android:cacheColorHint="@android:color/transparent"
+       android:divider="@android:color/transparent"
+       android:dividerHeight="0dip">
+       
+   </ListView>
+   <Button 
+       android:id="@+id/btnFilter"
+       android:layout_width="60dip"
+       android:layout_height="60dip"
+       android:background="@drawable/ic_filter_icon"
+       android:layout_alignParentBottom="true"
+       android:layout_alignParentRight="true"/>
+ 
+   <RelativeLayout
+       android:layout_width="fill_parent"
+       android:layout_height="fill_parent"
+       android:id="@+id/rlblank"
+         android:visibility="gone"
+     
+       android:background="@drawable/listlayout" >
+
+       <RelativeLayout
+           android:layout_width="fill_parent"
+           android:layout_height="fill_parent" 
+           android:id="@+id/rlerror"
+           android:visibility="gone"
+       >
+      
+
+       <ImageView
+           android:id="@+id/imageView1"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+          android:layout_centerHorizontal="true"
+          android:layout_centerVertical="true"
+           android:src="@drawable/nogps" />
+
+       <Button
+           android:id="@+id/btnRefresh"
+           android:layout_width="120dp"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/imageView1"
+           android:layout_centerHorizontal="true"
+           android:layout_marginTop="37dp"
+           android:padding="10dp"
+           android:textColor="#000000"
+           android:background="@drawable/btn_red"
+           android:text="Refresh" />
+
+       <TextView
+           android:id="@+id/textView1"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_above="@+id/imageView1"
+           android:layout_centerHorizontal="true"
+           android:layout_marginBottom="50dp"
+           android:layout_marginLeft="20dp"
+           android:layout_marginRight="20dp"
+           android:layout_marginTop="30dp"
+           android:text="Error in getting internet connection or gps Please try again.."
+           android:textColor="#000000"
+           android:textStyle="bold" />
+ </RelativeLayout>
+   </RelativeLayout>
+
+</RelativeLayout>

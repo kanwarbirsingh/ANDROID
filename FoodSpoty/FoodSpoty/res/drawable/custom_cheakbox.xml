@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/arow_custom" android:state_checked="true"/>
+    <item android:drawable="@drawable/arow_custom_blank" android:state_checked="false"/>
+
+</selector>

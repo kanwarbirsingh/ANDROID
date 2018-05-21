@@ -1,0 +1,124 @@
+<com.isoftinc.layout.MainLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+     <!-- This holds our menu -->
+     <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" 
+        android:background="@drawable/menu_bg">
+        <RelativeLayout 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--  user profile layout -->
+            <LinearLayout 
+            	android:id="@+id/userProfileLayout"
+           		android:layout_width="match_parent"
+            	android:layout_height="wrap_content"
+            	android:orientation="horizontal"
+            	android:padding="8dip">
+            	
+                <ImageView 
+                    android:id="@+id/userPic"
+                    android:layout_width="60dip"
+                    android:layout_height="60dip"
+                    android:src="@drawable/ic_user_pic"
+                    android:scaleType="fitXY"/>
+                
+                <RelativeLayout 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dip">
+                    
+                    <TextView 
+                        android:id="@+id/userName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Veronica James"
+                        android:textColor="@color/white_color"
+                        android:textSize="16dip"/>
+                    <TextView 
+                        android:id="@+id/userEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="veronica.james@gmail.com"
+                        android:layout_below="@+id/userName"
+                        android:textColor="@color/white_color"
+                        android:textSize="14dip"/>
+                    
+                </RelativeLayout>
+                
+            
+	        </LinearLayout>
+	        <ListView
+	            android:id="@+id/activity_main_menu_listview"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:background="@android:color/transparent"
+	            android:layout_below="@+id/userProfileLayout"
+	            android:layout_above="@+id/logoutLayout"
+	            android:scrollbars="none"
+	            android:divider="@android:color/transparent"
+	            android:dividerHeight="0dp"
+	            android:choiceMode="singleChoice"
+	            android:listSelector="#36434C"
+	            android:cacheColorHint="@android:color/transparent" >
+	        </ListView>
+	        
+	        <RelativeLayout 
+	            android:id="@+id/logoutLayout"
+	            android:layout_width="match_parent"
+	            android:layout_height="45dip"
+	            android:layout_alignParentBottom="true"
+	            android:background="@drawable/logout_bg">
+	            
+	            <Button 
+	                android:id="@+id/btn_logout"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="Logout"
+	                android:textColor="@color/white_color"
+	                android:background="@android:color/transparent"
+	                android:layout_centerInParent="true"
+	                android:textSize="16dip"/>
+	            
+	        </RelativeLayout>
+        </RelativeLayout>
+        
+    </LinearLayout>
+    
+    <!-- This holds our content-->
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/fragmentBody"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+		
+        <!-- This acts as Actionbar -->
+        <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:background="#96D6E3"
+	        android:orientation="horizontal" >
+            
+            <include 
+                layout="@layout/header_layout"/>
+            
+        </LinearLayout>       
+        
+        <!-- This is where fragment will show up -->
+        <FrameLayout
+		    android:id="@+id/activity_main_content_fragment"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent" >
+        
+    	</FrameLayout>
+        
+    </LinearLayout>
+
+</com.isoftinc.layout.MainLayout>

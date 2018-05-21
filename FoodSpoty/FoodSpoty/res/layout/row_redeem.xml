@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="150dip"
+    android:layout_height="wrap_content" 
+    android:background="@color/white_color">
+    
+    <ImageView 
+        android:id="@+id/rowOfferBg"
+        android:layout_width="150dip"
+        android:layout_height="150dip"
+        android:src="@drawable/temp_coupons"
+        android:scaleType="fitXY"/>
+    
+    <Button 
+        android:id="@+id/btnRedeem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip"
+        android:text="Redeem"
+        android:background="@drawable/btn_yellow"
+        android:textColor="@color/white_color"
+        android:layout_alignTop="@+id/rowOfferBg"
+        android:layout_alignRight="@+id/rowOfferBg"
+        android:layout_margin="8dip"/>
+    
+    
+    <TextView 
+        android:id="@+id/rowOfferTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dip"
+        android:gravity="center"
+        android:text="Minimum Points Req. 100 Available"
+        android:layout_below="@+id/rowOfferBg"
+        android:layout_centerHorizontal="true"
+        android:textSize="16dip"/>
+
+</RelativeLayout>

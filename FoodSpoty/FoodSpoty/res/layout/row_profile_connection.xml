@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" 
+    android:padding="8dip">
+    
+    <ImageView 
+        android:id="@+id/rowUserPic"
+        android:layout_width="60dip"
+        android:layout_height="60dip"
+        android:src="@drawable/temp_user"
+        android:scaleType="fitXY"/>
+    
+    <RelativeLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="8dip">
+        <TextView 
+            android:id="@+id/rowUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="James Richardson"
+            android:textSize="17dip"
+            android:textColor="#616161"/>
+        <TextView 
+            android:id="@+id/rowEarnedPoint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Points: 7000"
+            android:textSize="14dip"
+            android:layout_below="@+id/rowUserName"
+            android:textColor="#8c8c8c"/>
+    </RelativeLayout>
+    <RelativeLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center_vertical"
+        android:gravity="right">
+        
+        <Button 
+            android:id="@+id/btnConnectStatus"
+            android:layout_width="35dip"
+            android:layout_height="35dip"
+            android:background="@drawable/ic_correct"
+            android:layout_alignParentRight="true"/>
+        
+        
+    </RelativeLayout>
+    
+
+</LinearLayout>

@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="30dip"
+    android:layout_marginTop="30dip"
+    android:background="@color/white_color" >
+
+    <RelativeLayout
+        android:id="@+id/dialog_title_lay"
+        android:layout_width="match_parent"
+        android:layout_height="48dip" >
+
+        <TextView
+            android:id="@+id/dialog_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="APPLY FILTERS"
+            android:textColor="@color/black_color"
+            android:textSize="18dip" />
+
+        <ImageView
+            android:id="@+id/dialog_btn_close"
+            android:layout_width="48dip"
+            android:layout_height="48dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="8dip"
+            android:src="@drawable/ic_close_black_48dp" />
+
+        <View
+            android:id="@+id/dialog_title_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_alignParentBottom="true"
+            
+            android:layout_marginBottom="5dip"
+            android:background="#727272" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        
+        android:layout_above="@+id/dialog_bottom_lay"
+        android:layout_below="@+id/dialog_title_lay"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+              <RelativeLayout
+                android:id="@+id/dialog_radius_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip" >
+
+                <TextView
+                    android:id="@+id/label_radius"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dip"
+                    android:paddingTop="5dip"
+                    android:text="RADIUS"
+                    android:textColor="@color/black_color"
+                    android:textSize="16dip" />
+
+                <RelativeLayout
+                    android:id="@+id/dialog_seekbar_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/label_radius" >
+
+                    <TextView
+                        android:id="@+id/dialog_label_min_radius"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dip"
+                        android:text="Min Radius"
+                        android:textColor="#727272"
+                        android:textSize="14dip" />
+
+                    <TextView
+                        android:id="@+id/dialog_label_max_radius"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:paddingTop="5dip"
+                        android:text="Max Radius"
+                        android:textColor="@color/light_black"
+                        android:textSize="14dip" />
+
+                    <TextView
+                        android:id="@+id/dialog_label_min_radius_km"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/dialog_label_min_radius"
+                        android:paddingTop="5dip"
+                        android:text="0 KM"
+                        android:textColor="#727272"
+                        android:textSize="14dip" />
+
+                    <TextView
+                        android:id="@+id/dialog_label_max_radius_km"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/dialog_label_max_radius"
+                        android:paddingTop="5dip"
+                        android:text="150 KM"
+                        android:textColor="#727272"
+                        android:textSize="14dip" />
+                </RelativeLayout>
+
+                <com.rangebar.RangeBar
+                    xmlns:custom="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/rangebar2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dialog_seekbar_lay"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    custom:tickCount="150" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_below="@+id/dialog_radius_lay"
+                android:layout_marginBottom="10dip"
+                android:background="#727272" />
+
+            <LinearLayout
+                android:id="@+id/dialog_category_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/divider2"
+                android:paddingLeft="10dip"
+                android:orientation="vertical"
+                android:paddingRight="10dip" >
+
+                <TextView
+                    android:id="@+id/label_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dip"
+                    android:paddingTop="5dip"
+                    android:text="SELECT CATEGORY"
+                    android:textColor="@color/black_color"
+                    android:textSize="16dip" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1"
+					android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/chkbar"
+                        style="@style/custom_cheakbox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/custom_cheakbox"
+                        android:paddingLeft="5dip"
+                        android:layout_weight=".5"
+                        android:text="Bar"
+                        android:textColor="@color/light_black" />
+
+					<CheckBox
+					    android:id="@+id/chkrestorent"
+					    style="@style/custom_cheakbox"
+					    android:layout_width="match_parent"
+					    android:layout_height="wrap_content"
+					    android:layout_marginLeft="3dp"
+					    android:layout_weight=".5"
+					    android:button="@drawable/custom_cheakbox"
+					    android:paddingLeft="5dip"
+					    android:text="Restaurent"
+					    android:textColor="@color/light_black" />
+
+                </LinearLayout>
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <CheckBox
+                        android:id="@+id/chklounge"
+                        style="@style/custom_cheakbox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/custom_cheakbox"
+                        android:paddingLeft="5dip"
+                        android:layout_weight=".5"
+                        android:text="Lounge"
+                        android:textColor="@color/light_black" />
+
+					<CheckBox
+					    android:id="@+id/chkBakery"
+					    style="@style/custom_cheakbox"
+					    android:layout_width="match_parent"
+					    android:layout_height="wrap_content"
+					    android:layout_marginLeft="3dp"
+					    android:layout_weight=".5"
+					    android:button="@drawable/custom_cheakbox"
+					    android:paddingLeft="5dip"
+					    android:text="Bakery"
+					    android:textColor="@color/light_black" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                     >
+
+                    <CheckBox
+                        android:id="@+id/chkCafe"
+                        style="@style/custom_cheakbox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/custom_cheakbox"
+                        android:paddingLeft="5dip"
+                        android:layout_weight=".5"
+                        android:text="Café"
+                        android:textColor="@color/light_black" />
+
+					<CheckBox
+					    android:id="@+id/chkPubs"
+					    style="@style/custom_cheakbox"
+					    android:layout_width="match_parent"
+					    android:layout_height="wrap_content"
+					    android:layout_marginLeft="3dp"
+					    android:layout_weight=".5"
+					    android:button="@drawable/custom_cheakbox"
+					    android:paddingLeft="5dip"
+					    android:text="Pubs"
+					    android:textColor="@color/light_black" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_below="@+id/dialog_category_lay"
+                android:layout_marginBottom="10dip"
+                android:layout_marginTop="10dip"
+                android:background="#727272" />
+
+            <LinearLayout
+                android:id="@+id/dialog_city_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/divider3"
+                android:paddingLeft="10dip"
+                android:orientation="vertical"
+                android:paddingRight="10dip" >
+
+                <TextView
+                    android:id="@+id/label_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dip"
+                    android:paddingTop="5dip"
+                    android:text="SELECT CITY"
+                    android:textColor="@color/black_color"
+                    android:textSize="16dip" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1"
+					android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/chkcityHyderabad"
+                        style="@style/custom_cheakbox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/custom_cheakbox"
+                        android:paddingLeft="5dip"
+                        android:layout_weight=".5"
+                        android:text="Hyderabad"
+                        android:textColor="@color/light_black" />
+
+					
+
+                </LinearLayout>
+
+                <CheckBox
+                    android:id="@+id/chkcityBangalore"
+                    style="@style/custom_cheakbox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight=".5"
+                    android:button="@drawable/custom_cheakbox"
+                    android:paddingLeft="5dip"
+                    android:text="Bangalore"
+                    android:textColor="@color/light_black" />
+
+            </LinearLayout>
+            
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/dialog_bottom_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="10dip" >
+
+        <Button
+            android:id="@+id/btn_apply_filter"
+            android:layout_width="match_parent"
+            android:layout_height="40dip"
+            android:background="@drawable/btn_yellow"
+            android:gravity="center"
+            android:text="APPLY"
+            android:textColor="@color/white_color"
+            android:textSize="16dip"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</RelativeLayout>

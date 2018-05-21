@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray">
+    
+    <RelativeLayout 
+        android:id="@+id/profileTop"
+        android:layout_width="match_parent"
+        android:layout_height="200dip"
+        android:background="@drawable/temp_rest_profile"
+        android:paddingTop="5dip">
+        
+        <Button 
+            android:id="@+id/btnBack"
+            android:layout_width="35dip"
+            android:layout_height="35dip"
+            android:background="@drawable/ic_back"
+            android:layout_alignParentLeft="true"
+            android:padding="5dip"/>
+        
+        <TextView 
+            android:id="@+id/txtLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textSize="16dip"
+            android:textStyle="bold"
+            android:textColor="@color/white_color"
+            android:layout_alignTop="@+id/btnBack"
+            android:gravity="center_vertical"
+            android:layout_alignBottom="@+id/btnBack"/>
+        
+        <ImageView 
+            android:id="@+id/restPic"
+            android:layout_width="55dip"
+            android:layout_height="55dip"
+            android:src="@drawable/temp_user"
+            android:layout_centerHorizontal="true"
+            android:visibility="invisible"
+            android:layout_below="@+id/btnBack"/>
+        
+        <TextView 
+            android:id="@+id/restName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hard Rock Cafe"
+            android:textColor="@color/white_color"
+            android:textSize="22dip"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/restPic"
+            android:layout_marginTop="5dip"/>
+        
+        <TextView 
+            android:id="@+id/restTiming"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="09:00 AM - 12 PM"
+            android:textColor="@color/white_color"
+            android:textSize="16dip"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/restName"/>
+        
+        <Button 
+            android:id="@+id/btnRate"
+            android:layout_width="60dip"
+            android:layout_height="wrap_content"
+            android:text="3.6"
+            android:textSize="16dip"
+            android:padding="5dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/btn_red"
+            android:layout_below="@+id/restTiming"
+            android:textColor="@color/white_color"
+            android:layout_centerHorizontal="true"/>
+        
+    </RelativeLayout>
+    
+    
+    <!-- tab start content -->
+    <LinearLayout 
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/profileTop"
+        android:background="@color/white_color"
+        android:padding="10dip">
+        
+        <RelativeLayout 
+            android:id="@+id/btnTabDetails"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            
+            <TextView 
+                android:id="@+id/txtDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DETAILS"
+                android:textColor="@color/dark_gray"
+                android:layout_centerHorizontal="true"
+                android:textSize="16dip"/>
+        </RelativeLayout>
+        
+        <RelativeLayout 
+            android:id="@+id/btnTabCoupons"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            
+            <TextView 
+                android:id="@+id/txtCoupons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="COUPONS"
+                android:textColor="@color/dark_gray"
+                android:layout_centerHorizontal="true"
+                android:textSize="16dip"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <!-- close tab content -->
+    <LinearLayout 
+        android:id="@+id/tabFooterLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tabLayout"
+        android:background="@color/white_color"
+        android:orientation="horizontal">
+        
+        <View 
+            android:id="@+id/tabDetailsFooter"
+            android:layout_width="wrap_content"
+            android:layout_height="1dip"
+            android:background="@color/header_bg"
+            android:layout_weight="1"/>
+        
+        <View 
+            android:id="@+id/tabCouponsFooter"
+            android:layout_width="wrap_content"
+            android:layout_height="1dip"
+            android:background="@color/header_bg"
+            android:visibility="invisible"
+            android:layout_weight="1"/>
+        
+    </LinearLayout>
+    
+    <Button 
+        android:id="@+id/btnLike"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_like50green"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dip"
+        android:layout_below="@+id/profileTop"
+        android:layout_marginTop="-35dip"/>
+    <!-- 
+    /* start Here two layout merage here one for listview and second is gridview 
+     --> 
+     <RelativeLayout
+         android:id="@+id/detailsLayout"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_above="@+id/rlbottom"
+         android:layout_below="@+id/tabFooterLay" >
+         
+        <ImageView 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/temp_map"
+            android:visibility="gone"
+            android:scaleType="fitXY"/> 
+            <fragment
+            android:id="@+id/map1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/RLSpiner"
+            android:layout_weight="1"
+            android:layout_below="@+id/header"
+            class="com.google.android.gms.maps.SupportMapFragment" />
+        <RelativeLayout 
+            android:id="@+id/restInfoLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            
+            android:paddingLeft="10dip"
+            android:layout_above="@+id/btngetroute"
+            android:layout_marginRight="10dip"
+            android:layout_marginBottom="5dip">
+            
+            <TextView 
+                android:id="@+id/restContactNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dip"
+                android:text="+91-9891952466"
+                android:textColor="@color/dark_gray"
+                android:drawableLeft="@drawable/ic_call"
+                android:drawablePadding="5dip"
+                android:background="@color/light_gray"/>
+            
+            <TextView 
+                android:id="@+id/restAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/restContactNumber"
+                android:padding="20dip"
+                android:text="Plot No. 283, Road No 78, Jubilee Hills, Film Nagar Hyderabad-500033"
+                android:textColor="@color/dark_gray"
+                android:drawablePadding="5dip"
+                android:drawableLeft="@drawable/ic_home_gray"
+                android:background="@color/white_color"/>
+            
+        </RelativeLayout>
+         <Button
+            android:id="@+id/btngetroute"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+          
+            android:background="@drawable/btn_yellowwithoutrount"
+            android:text="Get Route"
+            android:padding="10dp"
+            android:textSize="16dp"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/white_color" />
+     </RelativeLayout>    
+     <GridView
+	    android:id="@+id/couponGridview"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:numColumns="auto_fit"
+	    android:horizontalSpacing="10dp"
+	    android:verticalSpacing="10dp"
+       	android:layout_below="@+id/tabFooterLay"
+	    android:gravity="center"
+	    android:stretchMode="columnWidth" >  
+	</GridView>  
+     
+     
+     <!-- 
+    /* end Here two layout merage here one for listview and second is gridview 
+     -->
+
+</RelativeLayout>

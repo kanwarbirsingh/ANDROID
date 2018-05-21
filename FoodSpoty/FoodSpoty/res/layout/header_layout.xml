@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="55dip"
+    android:background="@color/header_bg">
+    
+    <RelativeLayout 
+        android:id="@+id/leftLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true">
+        <Button 
+            android:id="@+id/btn_slidemenu"
+            android:layout_width="55dip"
+            android:layout_height="55dip"
+            android:visibility="visible"
+            android:background="@drawable/ic_menu"/>
+        <Button 
+            android:id="@+id/btn_menuback"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_back"/>
+    </RelativeLayout>
+    
+    
+    <RelativeLayout 
+        android:id="@+id/centerLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/leftLayout"
+        android:layout_toLeftOf="@+id/rightLayout">
+        
+        <TextView 
+            android:id="@+id/headTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HOME"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white_color"
+            android:textSize="18dip"/>
+        
+    </RelativeLayout>
+    
+    <LinearLayout 
+        android:id="@+id/rightLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal">
+        
+        <Button 
+            android:id="@+id/btn_menuSearch"
+            android:layout_width="45dip"
+            android:layout_height="55dip"
+            android:background="@drawable/ic_search"/>
+        
+        <Button 
+            android:id="@+id/btn_menuFilter"
+            android:layout_width="35dip"
+            android:layout_height="55dip"
+            android:layout_marginLeft="10dip"
+            android:background="@drawable/ic_right_menu"/>
+        
+    </LinearLayout>
+<RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#ffffff"
+            android:visibility="gone"
+            android:id="@+id/rlsearch" >
+        <include layout="@layout/searchbar_filter"/>
+        </RelativeLayout>
+</RelativeLayout>

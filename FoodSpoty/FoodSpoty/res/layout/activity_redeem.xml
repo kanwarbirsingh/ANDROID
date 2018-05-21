@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f5f7">
+    
+    <RelativeLayout 
+        android:id="@+id/redeemTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <include 
+            layout="@layout/header_layout"/>
+        
+    </RelativeLayout>
+    
+    <GridView
+	    android:id="@+id/redeemGridview"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:numColumns="auto_fit"
+	    android:horizontalSpacing="10dp"
+	    android:verticalSpacing="10dp"
+       	android:layout_below="@+id/redeemTop"
+	    android:gravity="center"
+	    android:stretchMode="columnWidth" >  
+	</GridView>
+
+</RelativeLayout>
