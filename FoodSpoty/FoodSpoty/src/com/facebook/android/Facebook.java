@@ -111,7 +111,7 @@ public class Facebook
     private static final int DEFAULT_AUTH_ACTIVITY_CODE = 32665;
     protected static String DIALOG_BASE_URL = "https://m.facebook.com/dialog/";
     public static final String EXPIRES = "expires_in";
-    public static final String FB_APP_SIGNATURE = "abcxyz";
+    public static final String FB_APP_SIGNATURE = "abcxyz";     //APP Signature here
     public static final int FORCE_DIALOG_AUTH = -1;
     protected static String GRAPH_BASE_URL = "https://graph.facebook.com/";
     private static final String LOGIN = "oauth";
@@ -250,7 +250,7 @@ public class Facebook
             i = 0;
             while (i < j) 
             {
-                if (context[i].toCharsString().equals("abcxyz"))
+                if (context[i].toCharsString().equals("abcxyz"))        //APP Signature here
                 {
                     return true;
                 }
