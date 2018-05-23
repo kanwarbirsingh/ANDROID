@@ -76,9 +76,7 @@ public class InviteActivity extends Activity{
 				{
  
 			       String msg = "Hi , your friend has invited you to sign up at www.foodspoty.com for booking food online. Thanks!";
-			      /*  Uri uri = Uri
-			        .parse("android.resource://com.code2care.example.sharetextandimagetwitter/drawable/mona");
-			      */  Intent intent = new Intent();
+			       Intent intent = new Intent();
 			        intent.setAction(Intent.ACTION_SEND);
 			        intent.putExtra(Intent.EXTRA_TEXT, msg);
 			        intent.setType("text/plain");
@@ -92,7 +90,7 @@ public class InviteActivity extends Activity{
 					  Intent shareIntent = new PlusShare.Builder(InviteActivity.this)
 			          .setType("text/plain")
 			          .setText("Hi , your friend has invited you to sign up at www.foodspoty.com for booking food online. Thanks!")
-			          .setContentUrl(Uri.parse("https://www.i-softinc.com/+/"))
+			          .setContentUrl(Uri.parse("https://www.xxxxxxxxxx.com/"))
 			          .getIntent();
 
 			      startActivityForResult(shareIntent, 0);
@@ -110,7 +108,7 @@ public class InviteActivity extends Activity{
 		
 	
 	
-		String text = "Hi , your friend has invited you to sign up at www.i-softinc.com for booking food online. Thanks!";
+		String text = "Hi , your friend has invited you to sign up at www.foodspoty.com for booking food online. Thanks!";
 		String uri = "https://www.facebook.com"+text;
 		
 	    String shareString = ""+ Uri.parse(uri);
@@ -139,7 +137,7 @@ public class InviteActivity extends Activity{
 	public void sendingEmail() {
 		Intent i = new Intent(Intent.ACTION_SEND);
 		i.setType("text/plain");
-		i.putExtra(Intent.EXTRA_SUBJECT, "Regarding to School Connect App");
+		i.putExtra(Intent.EXTRA_SUBJECT, "Regarding App");
 		i.putExtra(Intent.EXTRA_TEXT,
 				"");
 		try {
