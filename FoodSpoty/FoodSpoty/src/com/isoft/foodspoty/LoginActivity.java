@@ -67,7 +67,7 @@ public class LoginActivity extends Activity implements OnClickListener,Connectio
 	Button btn_slidemenu, btn_menuback, btn_menuSearch, btn_menuFilter;
 	TextView headTitle;
 	CustomToast ct;
-	private static String APP_ID = "871148632959914"; // Replace with your App ID
+	private static String APP_ID = "XXXXX"; // Replace with your App ID
 	// Instance of Facebook Class
 	private Facebook facebook = new Facebook(APP_ID);
 	private AsyncFacebookRunner mAsyncRunner;
