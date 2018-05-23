@@ -6,18 +6,18 @@ import android.content.Intent;
 public final class CommonUtilities {
 	
 	// give your server registration url here
-    static final String SERVER_URL = "http://192.206.6.92/~earcandy/TCI/epub/epub_user.php"; 
+    static final String SERVER_URL = "SERVER URL here"; 
 
     // Google project id
-    static final String SENDER_ID = "816178502807"; 
+    static final String SENDER_ID = "SENDER_ID"; 
     
     /**
      * Tag used on log messages.
      */
-    static final String TAG = "AndroidHive GCM";
+    static final String TAG = "TAG";
 
     static final String DISPLAY_MESSAGE_ACTION =
-            "com.isoftinc.foodparadise.DISPLAY_MESSAGE";
+            "DISPLAY_MESSAGE";
 
     static final String EXTRA_MESSAGE = "message";
 
